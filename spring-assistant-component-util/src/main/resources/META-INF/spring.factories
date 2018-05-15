@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.github.jiahaowen.spring.assistant.component.util.internal.SpringAssistantComponentUtilConfig
+  com.github.jiahaowen.spring.assistant.component.migration.internal.SpringAssistantComponentUtilConfig

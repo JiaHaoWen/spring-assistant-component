@@ -1,4 +1,3 @@
-/** WaCai Inc. Copyright (c) 2009-2017 All Rights Reserved. */
 package com.github.jiahaowen.spring.assistant.component.concurrent;
 
 import com.github.jiahaowen.spring.assistant.component.concurrent.internal.callback.BizServiceCallBack;
@@ -6,9 +5,9 @@ import com.github.jiahaowen.spring.assistant.component.concurrent.internal.model
 import com.github.jiahaowen.spring.assistant.component.concurrent.internal.task.AbstractCallableTask;
 import com.github.jiahaowen.spring.assistant.component.concurrent.internal.task.CallableTaskDispatcher;
 import com.github.jiahaowen.spring.assistant.component.concurrent.internal.util.ConcurrentComponentHelper;
-import com.github.jiahaowen.spring.assistant.component.util.common.result.BatchResult;
-import com.github.jiahaowen.spring.assistant.component.util.common.result.Result;
-import com.github.jiahaowen.spring.assistant.component.util.common.result.ResultUtil;
+import com.github.jiahaowen.spring.assistant.component.migration.common.result.BatchResult;
+import com.github.jiahaowen.spring.assistant.component.migration.common.result.Result;
+import com.github.jiahaowen.spring.assistant.component.migration.common.result.ResultUtil;
 import java.util.List;
 import java.util.concurrent.ExecutorCompletionService;
 import java.util.concurrent.ExecutorService;

@@ -1,8 +1,7 @@
-/** WaCai Inc. Copyright (c) 2009-2017 All Rights Reserved. */
 package com.github.jiahaowen.spring.assistant.component.concurrent.internal.callback;
 
 import com.github.jiahaowen.spring.assistant.component.concurrent.internal.models.BasicOption;
-import com.github.jiahaowen.spring.assistant.component.util.common.result.Result;
+import com.github.jiahaowen.spring.assistant.component.migration.common.result.Result;
 
 /**
  * 单次业务执行逻辑回调接口

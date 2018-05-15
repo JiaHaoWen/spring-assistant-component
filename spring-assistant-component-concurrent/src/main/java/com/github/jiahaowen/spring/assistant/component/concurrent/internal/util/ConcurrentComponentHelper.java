@@ -1,8 +1,7 @@
-/** WaCai Inc. Copyright (c) 2009-2017 All Rights Reserved. */
 package com.github.jiahaowen.spring.assistant.component.concurrent.internal.util;
 
 import com.github.jiahaowen.spring.assistant.component.concurrent.internal.models.BasicOption;
-import com.github.jiahaowen.spring.assistant.component.util.common.error.ServiceException;
+import com.github.jiahaowen.spring.assistant.component.migration.common.error.ServiceException;
 import com.google.common.collect.Sets;
 import java.util.List;
 import java.util.Set;

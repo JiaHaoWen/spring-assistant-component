@@ -5,7 +5,7 @@ import com.github.jiahaowen.spring.assistant.component.concurrent.internal.confi
 import com.github.jiahaowen.spring.assistant.component.concurrent.testconcurrent.TestBizExecService;
 import com.github.jiahaowen.spring.assistant.component.concurrent.testconcurrent.models.Person;
 import com.github.jiahaowen.spring.assistant.component.concurrent.testconcurrent.models.TestResult;
-import com.github.jiahaowen.spring.assistant.component.util.common.result.BatchResult;
+import com.github.jiahaowen.spring.assistant.component.migration.common.result.BatchResult;
 import com.google.common.collect.Lists;
 import java.util.List;
 import org.junit.Assert;

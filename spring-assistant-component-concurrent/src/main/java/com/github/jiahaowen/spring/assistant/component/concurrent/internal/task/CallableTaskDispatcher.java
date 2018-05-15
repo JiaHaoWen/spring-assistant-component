@@ -1,10 +1,9 @@
-/** WaCai Inc. Copyright (c) 2009-2017 All Rights Reserved. */
 package com.github.jiahaowen.spring.assistant.component.concurrent.internal.task;
 
-import com.github.jiahaowen.spring.assistant.component.util.common.error.CommonError;
-import com.github.jiahaowen.spring.assistant.component.util.common.error.ErrorContext;
-import com.github.jiahaowen.spring.assistant.component.util.common.result.BatchResult;
-import com.github.jiahaowen.spring.assistant.component.util.common.result.Result;
+import com.github.jiahaowen.spring.assistant.component.migration.common.error.CommonError;
+import com.github.jiahaowen.spring.assistant.component.migration.common.error.ErrorContext;
+import com.github.jiahaowen.spring.assistant.component.migration.common.result.BatchResult;
+import com.github.jiahaowen.spring.assistant.component.migration.common.result.Result;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import java.util.List;
