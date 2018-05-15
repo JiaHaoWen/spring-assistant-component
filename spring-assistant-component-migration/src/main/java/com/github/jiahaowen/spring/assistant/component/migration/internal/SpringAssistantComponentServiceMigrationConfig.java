@@ -3,6 +3,8 @@ package com.github.jiahaowen.spring.assistant.component.migration.internal;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.ABTest;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.ABTestAspectSupport;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.MethodAnnotationPointcutAdvisor;
+import com.github.jiahaowen.spring.assistant.component.migration.abtest.common.control.advisor.ABTestControlAdvisor;
+import com.github.jiahaowen.spring.assistant.component.migration.abtest.common.control.advisor.Trigger;
 import org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.aop.support.AbstractPointcutAdvisor;
@@ -32,10 +34,19 @@ public class SpringAssistantComponentServiceMigrationConfig {
         return abTestAspectSupportAdvisor;
     }
 
+    @Bean(name = "abTestControlAdvisor")
+    @ConditionalOnBean(ABTestControlAdvisor.class)
+    public AbstractPointcutAdvisor abTestControlAdvisor(ABTestControlAdvisor abTestControlAdvisor) {
+        AbstractPointcutAdvisor abTestAspectSupportAdvisor =
+                new MethodAnnotationPointcutAdvisor(Trigger.class, abTestControlAdvisor);
+        abTestAspectSupportAdvisor.setOrder(0);
+        return abTestAspectSupportAdvisor;
+    }
+
     @Bean
     public AbstractAdvisorAutoProxyCreator abTestAspectSupportProxyCreator() {
         DefaultAdvisorAutoProxyCreator proxy = new DefaultAdvisorAutoProxyCreator();
-        proxy.setAdvisorBeanNamePrefix("abTestAspectSupport");
+        proxy.setAdvisorBeanNamePrefix("abTest");
         proxy.setProxyTargetClass(true);
         // proxy.setInterceptorNames("abTestAspectSupportAdvisor");
         // 注意此处不需要设置，否则会执行两次
