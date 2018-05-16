@@ -1,4 +1,3 @@
-/** WaCai Inc. Copyright (c) 2009-2017 All Rights Reserved. */
 package com.github.jiahaowen.spring.assistant.component.util.common.util;
 
 import java.io.Serializable;

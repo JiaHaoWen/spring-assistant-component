@@ -1,4 +1,3 @@
-/** Alipay.com Inc. Copyright (c) 2004-2016 All Rights Reserved. */
 package com.github.jiahaowen.spring.assistant.component.util.diff.differ;
 
 import static com.google.common.base.Preconditions.checkArgument;

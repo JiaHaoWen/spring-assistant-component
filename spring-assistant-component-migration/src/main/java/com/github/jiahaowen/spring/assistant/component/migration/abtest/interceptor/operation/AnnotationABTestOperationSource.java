@@ -1,4 +1,3 @@
-/** Alipay.com Inc. Copyright (c) 2004-2016 All Rights Reserved. */
 package com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.operation;
 
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.parser.ABTestAnnotationParser;
