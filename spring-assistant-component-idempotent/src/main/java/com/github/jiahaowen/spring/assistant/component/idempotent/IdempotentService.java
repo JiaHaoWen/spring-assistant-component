@@ -2,7 +2,7 @@ package com.github.jiahaowen.spring.assistant.component.idempotent;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
-import com.github.jiahaowen.spring.assistant.component.migration.common.error.ServiceException;
+import com.github.jiahaowen.spring.assistant.component.util.common.error.ServiceException;
 import com.google.common.base.Throwables;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;

@@ -2,11 +2,11 @@ package com.github.jiahaowen.spring.assistant.component.migration.abtest.interce
 
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.checker.Checker;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.config.ABTestConfig;
-import com.github.jiahaowen.spring.assistant.component.migration.diff.DifferBuilder;
-import com.github.jiahaowen.spring.assistant.component.migration.diff.differ.CompareResult;
-import com.github.jiahaowen.spring.assistant.component.migration.diff.differ.Configuration;
-import com.github.jiahaowen.spring.assistant.component.migration.diff.differ.Differ;
-import com.github.jiahaowen.spring.assistant.component.migration.diff.exception.DiffException;
+import com.github.jiahaowen.spring.assistant.component.util.diff.DifferBuilder;
+import com.github.jiahaowen.spring.assistant.component.util.diff.differ.CompareResult;
+import com.github.jiahaowen.spring.assistant.component.util.diff.differ.Configuration;
+import com.github.jiahaowen.spring.assistant.component.util.diff.differ.Differ;
+import com.github.jiahaowen.spring.assistant.component.util.diff.exception.DiffException;
 import com.github.jiahaowen.spring.assistant.component.migration.util.LoggerUtil;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;

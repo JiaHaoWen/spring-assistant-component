@@ -2,6 +2,7 @@ package com.github.jiahaowen.spring.assistant.component.migration.diff;
 
 import static org.testng.Assert.assertTrue;
 
+import com.github.jiahaowen.spring.assistant.component.util.diff.DifferBuilder;
 import org.testng.annotations.Test;
 
 /**

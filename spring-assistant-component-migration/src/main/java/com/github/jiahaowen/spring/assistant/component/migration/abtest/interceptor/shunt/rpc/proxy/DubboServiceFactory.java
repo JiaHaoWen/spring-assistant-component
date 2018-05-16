@@ -5,7 +5,7 @@ import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.config.utils.ReferenceConfigCache;
 import com.alibaba.dubbo.rpc.service.GenericService;
-import com.github.jiahaowen.spring.assistant.component.migration.common.error.ServiceException;
+import com.github.jiahaowen.spring.assistant.component.util.common.error.ServiceException;
 import java.io.IOException;
 import java.util.Properties;
 

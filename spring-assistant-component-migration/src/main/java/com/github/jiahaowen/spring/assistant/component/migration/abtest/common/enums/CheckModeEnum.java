@@ -1,6 +1,6 @@
 package com.github.jiahaowen.spring.assistant.component.migration.abtest.common.enums;
 
-import com.github.jiahaowen.spring.assistant.component.migration.common.util.ObjectUtil;
+import com.github.jiahaowen.spring.assistant.component.util.common.util.ObjectUtil;
 
 /**
  * 校验模式枚举

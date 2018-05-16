@@ -5,7 +5,7 @@ import com.github.jiahaowen.spring.assistant.component.migration.abtest.common.u
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.config.ABTestConfig;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.operation.ABTestOperation;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.shunt.ShuntService;
-import com.github.jiahaowen.spring.assistant.component.migration.common.util.ArrayUtil;
+import com.github.jiahaowen.spring.assistant.component.util.common.util.ArrayUtil;
 import com.github.jiahaowen.spring.assistant.component.migration.util.LoggerUtil;
 import com.github.jiahaowen.spring.assistant.component.migration.util.constans.ArcoreCommonConstants;
 import com.github.jiahaowen.spring.assistant.component.migration.util.constans.LoggerConstants;

@@ -14,13 +14,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * @author jiahaowen
  * @version $Id: ABTestConfigParser.java, v 0.1 16/11/19 上午12:44 jiahaowen Exp $
  */
-@Component
 public class ABTestConfigParser {
     private static final Logger LOGGER = LoggerFactory.getLogger(ABTestConfigParser.class);
     private static final String SEP_SEMICOLON = ";";

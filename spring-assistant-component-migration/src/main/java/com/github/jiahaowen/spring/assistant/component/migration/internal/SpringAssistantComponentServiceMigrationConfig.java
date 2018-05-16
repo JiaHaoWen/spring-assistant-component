@@ -3,8 +3,6 @@ package com.github.jiahaowen.spring.assistant.component.migration.internal;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.ABTest;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.ABTestAspectSupport;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.MethodAnnotationPointcutAdvisor;
-import com.github.jiahaowen.spring.assistant.component.migration.abtest.common.control.advisor.ABTestControlAdvisor;
-import com.github.jiahaowen.spring.assistant.component.migration.abtest.common.control.advisor.Trigger;
 import org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.aop.support.AbstractPointcutAdvisor;
@@ -12,6 +10,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * 配置入口。
@@ -21,6 +20,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan("com.github.jiahaowen.spring.assistant.component.migration")
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class SpringAssistantComponentServiceMigrationConfig {
 
     /** 注入拦截器 */
@@ -30,15 +30,6 @@ public class SpringAssistantComponentServiceMigrationConfig {
             ABTestAspectSupport abTestAspectSupport) {
         AbstractPointcutAdvisor abTestAspectSupportAdvisor =
                 new MethodAnnotationPointcutAdvisor(ABTest.class, abTestAspectSupport);
-        abTestAspectSupportAdvisor.setOrder(0);
-        return abTestAspectSupportAdvisor;
-    }
-
-    @Bean(name = "abTestControlAdvisor")
-    @ConditionalOnBean(ABTestControlAdvisor.class)
-    public AbstractPointcutAdvisor abTestControlAdvisor(ABTestControlAdvisor abTestControlAdvisor) {
-        AbstractPointcutAdvisor abTestAspectSupportAdvisor =
-                new MethodAnnotationPointcutAdvisor(Trigger.class, abTestControlAdvisor);
         abTestAspectSupportAdvisor.setOrder(0);
         return abTestAspectSupportAdvisor;
     }

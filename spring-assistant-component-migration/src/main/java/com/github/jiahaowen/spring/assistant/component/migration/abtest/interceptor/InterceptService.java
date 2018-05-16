@@ -8,7 +8,7 @@ import com.github.jiahaowen.spring.assistant.component.migration.abtest.intercep
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.operation.ABTestOperation;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.operation.ABTestOperationSource;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.shunt.ShuntService;
-import com.github.jiahaowen.spring.assistant.component.migration.common.util.DeepCloneUtil;
+import com.github.jiahaowen.spring.assistant.component.util.common.util.DeepCloneUtil;
 import com.github.jiahaowen.spring.assistant.component.migration.util.LoggerUtil;
 import com.github.jiahaowen.spring.assistant.component.migration.util.constans.LoggerConstants;
 import com.google.common.collect.Sets;

@@ -4,9 +4,9 @@ package com.github.jiahaowen.spring.assistant.component.concurrent.testconcurren
 import com.github.jiahaowen.spring.assistant.component.concurrent.internal.callback.BizServiceCallBack;
 import com.github.jiahaowen.spring.assistant.component.concurrent.testconcurrent.models.Person;
 import com.github.jiahaowen.spring.assistant.component.concurrent.testconcurrent.models.TestResult;
-import com.github.jiahaowen.spring.assistant.component.migration.common.error.ServiceException;
-import com.github.jiahaowen.spring.assistant.component.migration.common.result.Result;
-import com.github.jiahaowen.spring.assistant.component.migration.common.util.StringUtil;
+import com.github.jiahaowen.spring.assistant.component.util.common.error.ServiceException;
+import com.github.jiahaowen.spring.assistant.component.util.common.result.Result;
+import com.github.jiahaowen.spring.assistant.component.util.common.util.StringUtil;
 import org.springframework.stereotype.Component;
 
 /**

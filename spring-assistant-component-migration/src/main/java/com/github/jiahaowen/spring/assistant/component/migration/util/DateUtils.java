@@ -1,6 +1,6 @@
 package com.github.jiahaowen.spring.assistant.component.migration.util;
 
-import com.github.jiahaowen.spring.assistant.component.migration.common.util.StringUtil;
+import com.github.jiahaowen.spring.assistant.component.util.common.util.StringUtil;
 import com.github.jiahaowen.spring.assistant.component.migration.util.constans.ArcoreCommonConstants;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

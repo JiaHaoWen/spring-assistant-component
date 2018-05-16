@@ -1,6 +1,6 @@
 package com.github.jiahaowen.spring.assistant.component.migration.util;
 
-import com.github.jiahaowen.spring.assistant.component.migration.common.util.StringUtil;
+import com.github.jiahaowen.spring.assistant.component.util.common.util.StringUtil;
 import com.github.jiahaowen.spring.assistant.component.migration.util.constans.LoggerConstants;
 import com.github.jiahaowen.spring.assistant.component.migration.util.thread.BizThreadLocal;
 import org.slf4j.Logger;
