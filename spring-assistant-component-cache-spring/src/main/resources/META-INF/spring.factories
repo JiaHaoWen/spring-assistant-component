@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.github.jiahaowen.spring.assistant.component.cache.spring.autoconfigure.AutoloadCacheManageConfiguration,\
+com.github.jiahaowen.spring.assistant.component.cache.spring.autoconfigure.DistributedLockConfiguration,\
+com.github.jiahaowen.spring.assistant.component.cache.spring.autoconfigure.AutoloadCacheAutoConfigure,\
+com.github.jiahaowen.spring.assistant.component.cache.spring.SpringAssistantComponentCacheSpringConfig

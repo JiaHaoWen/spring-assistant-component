@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.jiahaowen.spring.assistant.component.cache.SpringAssistantComponentCacheConfig
