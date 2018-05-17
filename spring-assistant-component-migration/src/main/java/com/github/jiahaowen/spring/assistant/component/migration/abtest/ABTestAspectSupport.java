@@ -1,7 +1,7 @@
 package com.github.jiahaowen.spring.assistant.component.migration.abtest;
 
-import com.github.jiahaowen.spring.assistant.component.migration.abtest.common.control.ABTestControlConfig;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.InterceptService;
+import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.config.ABTestConfig;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
  *   <li>2.如果业务数据变更不频繁(非毫秒级变更),建议使用异步分流比对,减少对性能的影响
  * </ul>
  *
- * @see ABTestControlConfig
+ * @see ABTestConfig
  * @author jiahaowen.jhw
  * @version $Id: ABTestAspectSupport.java, v 0.1 2017-02-06 下午4:14 jiahaowen.jhw Exp $
  */

@@ -29,7 +29,7 @@
     </dependency>
     <dependency>
       <groupId>com.github.jiahaowen</groupId>
-      <artifactId>spring-assistant-component-util</artifactId>
+      <artifactId>spring-assistant-component-cache-spring</artifactId>
     </dependency>
   </dependencies>
 
