@@ -11,8 +11,11 @@ public interface Checkable {
     /**
      * 判断给定的对象是否为某一个类型.
      *
-     * <p>举例: public boolean applies(Object object) { if (object instanceof Map) { return true; }
-     * return false; }
+     * <p>{@code public boolean applies(Object object) { if (object instanceof Map) { return true; }
+     * return false; } }
+     *
+     * @param object 待判断对象
+     * @return
      */
     boolean applies(Object object);
 }

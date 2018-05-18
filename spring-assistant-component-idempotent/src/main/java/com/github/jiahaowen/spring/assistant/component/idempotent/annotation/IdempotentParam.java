@@ -29,7 +29,6 @@ import java.lang.annotation.*;
  * <p>那么最终参与生成的key是包含custom.name.value和age.previous
  *
  * @author jiahaowen
- * @date 2017/8/1 14:31
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.PARAMETER)
@@ -42,6 +41,8 @@ public @interface IdempotentParam {
      * <p>如果某个对象是值对象(primitive type or primitive wrapper type or String )则可以不用指定value
      *
      * <p>如果value是对象，可以直接用property表达式获取对象的某个值
+     *
+     * @return
      */
     String[] value() default "";
 }

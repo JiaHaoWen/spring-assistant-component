@@ -9,7 +9,6 @@ import com.github.jiahaowen.spring.assistant.component.cache.script.AbstractScri
 import java.lang.reflect.Method;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 /**
  * 组合多种缓存管理方案，本地保存短期缓存，远程保存长期缓存
@@ -17,7 +16,6 @@ import org.springframework.stereotype.Component;
  * @author jiahaowen
  * @version 2016年6月8日
  */
-@Component
 public class ComboCacheManager implements ICacheManager {
 
     private static final Logger logger = LoggerFactory.getLogger(ComboCacheManager.class);

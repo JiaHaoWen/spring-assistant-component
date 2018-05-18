@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author jiahaowen
- * @date 2017/9/12 19:44
  */
 @Component
 public class DefaultReturnValue implements ReturnValueStrategy {

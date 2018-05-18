@@ -33,19 +33,20 @@ public class Result<T> implements Serializable {
      */
     private T resultObj;
 
-    /** 构造函数。 */
+    /** 构造函数 */
     public Result() {}
 
     /**
      * 构造函数
+     *
      * @param success
      */
-    public Result(boolean success){
+    public Result(boolean success) {
         this.success = success;
     }
 
     /**
-     * 构造函数。
+     * 构造函数
      *
      * @param success 是否成功。
      * @param errorContext 错误上下文。
@@ -58,35 +59,37 @@ public class Result<T> implements Serializable {
         this.resultObj = resultObj;
     }
 
+    /** @return */
     public boolean isSuccess() {
         return success;
     }
 
+    /** @param success */
     public void setSuccess(boolean success) {
         this.success = success;
     }
 
+    /** @return */
     public T getResultObj() {
         return resultObj;
     }
 
+    /** @param resultObj */
     public void setResultObj(T resultObj) {
         this.resultObj = resultObj;
     }
 
+    /** @return */
     public ErrorContext getErrorContext() {
         return errorContext;
     }
 
+    /** @param errorContext */
     public void setErrorContext(ErrorContext errorContext) {
         this.errorContext = errorContext;
     }
 
-    /**
-     * 必须是ToStringStyle.SHORT_PREFIX_STYLE，形式如下:</br> Person[name=John Doe,age=33,smoker=false]</br>
-     *
-     * @see Object#toString()
-     */
+    /** @return */
     @Override
     public String toString() {
         return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);

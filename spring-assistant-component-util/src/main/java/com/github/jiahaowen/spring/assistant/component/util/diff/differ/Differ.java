@@ -45,7 +45,14 @@ public final class Differ {
         this.configuration = configuration;
     }
 
-    /** 采用自定义的差异比较算法,比较两个字符串序列之间的差异点 */
+    /**
+     * 采用自定义的差异比较算法,比较两个字符串序列之间的差异点
+     *
+     * @param original
+     * @param revised
+     * @param algorithm
+     * @return
+     */
     public List<CompareResult> diff(
             List<String> original, List<String> revised, DiffAlgorithm algorithm) {
         if (original == null) {
@@ -109,7 +116,15 @@ public final class Differ {
         return algorithm.diff(serilizerObject(base), serilizerObject(working));
     }
 
-    /** 自定义算法判断对象是否相同 */
+    /**
+     * 自定义算法判断对象是否相同
+     *
+     * @param base
+     * @param working
+     * @param algorithm
+     * @return
+     * @throws DiffException
+     */
     public boolean isEqualsByCustomAlgorithm(
             final Object base, final Object working, DiffAlgorithm algorithm) throws DiffException {
 
@@ -167,6 +182,12 @@ public final class Differ {
         return lineWriter.write(objectClassName, object);
     }
 
+    /**
+     * @param base
+     * @param working
+     * @return
+     * @throws DiffException
+     */
     public List<CompareResult> quickCompareByMyers(final Object base, final Object working)
             throws DiffException {
 
@@ -209,7 +230,12 @@ public final class Differ {
         return lineWriter.write(path, base, working);
     }
 
-    /** 返回对象类型 */
+    /**
+     * 返回对象类型
+     *
+     * @param object
+     * @return
+     */
     private String getBeanName(final Object object) {
         return object.getClass().getSimpleName();
     }
@@ -227,7 +253,12 @@ public final class Differ {
         return customAlgorithmDiff(base, working, new MyersDiff());
     }
 
-    /** 序列化根节点 */
+    /**
+     * 序列化根节点
+     *
+     * @param configuration
+     * @return
+     */
     private LineWriter createRootLineWriter(Configuration configuration) {
         return new RootLineWriter(
                 new PropertyInclusionChecker(
@@ -237,6 +268,7 @@ public final class Differ {
                 new SerializerFactory());
     }
 
+    /** @return */
     private LineWriter createDefaultRootLineWriter() {
         return new RootLineWriter(
                 new PropertyInclusionChecker(new HashSet<String>(), new HashSet<String>()),
@@ -244,6 +276,7 @@ public final class Differ {
                 new SerializerFactory());
     }
 
+    /** @return */
     private Configuration createDefaultConfiguration() {
         return new Configuration();
     }

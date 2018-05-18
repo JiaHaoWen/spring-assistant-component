@@ -25,7 +25,13 @@ public class RootLineWriter implements LineWriter {
     /** 指定路径排除校验 */
     private final PathInclusionChecker pathInclusionChecker;
 
-    /** 构造函数 */
+    /**
+     * 构造函数
+     *
+     * @param propertyInclusionChecker
+     * @param pathInclusionChecker
+     * @param serializerFactory
+     */
     public RootLineWriter(
             final PropertyInclusionChecker propertyInclusionChecker,
             final PathInclusionChecker pathInclusionChecker,
@@ -45,6 +51,12 @@ public class RootLineWriter implements LineWriter {
                                 pathInclusionChecker));
     }
 
+    /**
+     * @param path 路径描述了给定的对象在对象图中的位置.
+     * @param value 待序列化的对象
+     * @return
+     * @throws DiffException
+     */
     @Override
     public List<String> write(final String path, final Object value) throws DiffException {
 

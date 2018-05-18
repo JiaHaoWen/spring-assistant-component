@@ -20,8 +20,13 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan("com.github.jiahaowen.spring.assistant.component.idempotent")
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class SpringAssistantComponentIdempotentConfig {
-    /** 注入拦截器 */
-    @Bean(name = "abTestAspectSupportAdvisor")
+    /**
+     * 注入拦截器
+     *
+     * @param idempotentInterceptor
+     * @return
+     */
+    @Bean(name = "idempotentInterceptorAdvisor")
     @ConditionalOnBean(IdempotentInterceptor.class)
     public AbstractPointcutAdvisor idempotentInterceptorAdvisor(
             IdempotentInterceptor idempotentInterceptor) {
@@ -31,8 +36,9 @@ public class SpringAssistantComponentIdempotentConfig {
         return idempotentInterceptorAdvisor;
     }
 
+    /** @return */
     @Bean
-    public AbstractAdvisorAutoProxyCreator abTestAspectSupportProxyCreator() {
+    public AbstractAdvisorAutoProxyCreator idempotentInterceptorProxyCreator() {
         DefaultAdvisorAutoProxyCreator proxy = new DefaultAdvisorAutoProxyCreator();
         proxy.setAdvisorBeanNamePrefix("idempotent");
         proxy.setProxyTargetClass(true);

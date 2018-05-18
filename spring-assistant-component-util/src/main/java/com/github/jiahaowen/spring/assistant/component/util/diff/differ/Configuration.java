@@ -97,7 +97,12 @@ public final class Configuration {
         return copy;
     }
 
-    /** 自定义CheckableComparator */
+    /**
+     * 自定义CheckableComparator
+     *
+     * @param comparator
+     * @return
+     */
     public Configuration useComparator(final CheckableComparator<?> comparator) {
         checkArgument(comparator != null, "comparator must not be null.");
         final Configuration copy = this.copy();
@@ -105,7 +110,12 @@ public final class Configuration {
         return copy;
     }
 
-    /** 自定义Comparable 类型需实现Comparable接口 */
+    /**
+     * 自定义Comparable 类型需实现Comparable接口
+     *
+     * @param comparable
+     * @return
+     */
     public Configuration useNaturalOrderingFor(final Class<? extends Comparable<?>> comparable) {
         checkArgument(comparable != null, "comparable must not be null.");
         final Configuration copy = this.copy();
@@ -113,7 +123,11 @@ public final class Configuration {
         return copy;
     }
 
-    /** 深拷贝 */
+    /**
+     * 深拷贝
+     *
+     * @return
+     */
     private Configuration copy() {
         final Configuration copy = new Configuration();
         copy.comparables.addAll(this.comparables);
@@ -123,10 +137,12 @@ public final class Configuration {
         return copy;
     }
 
+    /** @return */
     Set<CheckableComparator> getCheckableComparators() {
         return comparators;
     }
 
+    /** @return */
     Set<Class<? extends Comparable<?>>> getComparables() {
         return comparables;
     }

@@ -12,7 +12,12 @@ public final class SerializerFactory {
     /** 构造函数 */
     public SerializerFactory() {}
 
-    /** 对给定的对象,找到对应的序列化策略 */
+    /**
+     * 对给定的对象,找到对应的序列化策略
+     *
+     * @param object
+     * @return
+     */
     public Serializer<Object> findFor(final Object object) {
 
         if (object == null) {

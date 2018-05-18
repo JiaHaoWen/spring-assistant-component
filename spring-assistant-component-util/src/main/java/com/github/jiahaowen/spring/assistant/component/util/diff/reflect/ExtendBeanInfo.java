@@ -32,12 +32,21 @@ public final class ExtendBeanInfo implements BeanInfo {
     /** 对象信息 */
     private final BeanInfo beanInfo;
 
-    /** 构造函数 */
+    /**
+     * 构造函数
+     *
+     * @param beanInfo
+     */
     private ExtendBeanInfo(final BeanInfo beanInfo) {
         this.beanInfo = beanInfo;
     }
 
-    /** 根据给定的对象信息,构造实例 */
+    /**
+     * 根据给定的对象信息,构造实例
+     *
+     * @param beanInfo
+     * @return
+     */
     public static BeanInfo of(final BeanInfo beanInfo) {
         checkNotNull(beanInfo, "给定的beanInfo不能为空.");
         checkArgument(!(beanInfo instanceof ExtendBeanInfo), "给定的对象必须类GenericTypeAwareBeanInfo类型.");
@@ -45,6 +54,7 @@ public final class ExtendBeanInfo implements BeanInfo {
         return new ExtendBeanInfo(beanInfo);
     }
 
+    /** @return */
     protected BeanInfo delegate() {
         return beanInfo;
     }
@@ -71,12 +81,19 @@ public final class ExtendBeanInfo implements BeanInfo {
         return matchingProperties.toArray(new PropertyDescriptor[0]);
     }
 
+    /** @return */
     @Override
     public BeanDescriptor getBeanDescriptor() {
         return delegate().getBeanDescriptor();
     }
 
-    /** 得到给定类型的属性描述器 */
+    /**
+     * 得到给定类型的属性描述器
+     *
+     * @param type
+     * @param propertyDescriptor
+     * @return
+     */
     private PropertyDescriptor getPropertyDescriptor(
             final Class<?> type, final PropertyDescriptor propertyDescriptor) {
 
@@ -111,7 +128,12 @@ public final class ExtendBeanInfo implements BeanInfo {
         }
     }
 
-    /** 根据get方法名称,确定set方法名称 */
+    /**
+     * 根据get方法名称,确定set方法名称
+     *
+     * @param readMethod
+     * @return
+     */
     private String determineWriteMethodNameForReadMethod(final Method readMethod) {
         final String readMethodName = readMethod.getName();
         if (readMethodName.contains(BOOLEAN_GETTER_PREFIX)) {
@@ -120,7 +142,13 @@ public final class ExtendBeanInfo implements BeanInfo {
         return readMethodName.replace(GETTER_PREFIX, SETTER_PREFIX);
     }
 
-    /** 根据方法名称及对象类型,判断是否为桥接方法.非桥接方法时,返回方法信息 */
+    /**
+     * 根据方法名称及对象类型,判断是否为桥接方法.非桥接方法时,返回方法信息
+     *
+     * @param methodName
+     * @param type
+     * @return
+     */
     private Method getPublicNonBridgedMethod(final String methodName, final Class<?> type) {
         for (final Method method : type.getMethods()) {
             final boolean isMatchingName = method.getName().equals(methodName);
@@ -137,36 +165,43 @@ public final class ExtendBeanInfo implements BeanInfo {
     /**
      * *************************************************************************************************************************
      */
+    /** @return */
     @Override
     public BeanInfo[] getAdditionalBeanInfo() {
         return null;
     }
 
+    /** @return */
     @Override
     public int getDefaultEventIndex() {
         return 0;
     }
 
+    /** @return */
     @Override
     public int getDefaultPropertyIndex() {
         return 0;
     }
 
+    /** @return */
     @Override
     public EventSetDescriptor[] getEventSetDescriptors() {
         return null;
     }
 
+    /** @return */
     @Override
     public Image getIcon(int iconKind) {
         return null;
     }
 
+    /** @return */
     @Override
     public MethodDescriptor[] getMethodDescriptors() {
         return null;
     }
 
+    /** @return */
     @Override
     public String toString() {
         return delegate().toString();

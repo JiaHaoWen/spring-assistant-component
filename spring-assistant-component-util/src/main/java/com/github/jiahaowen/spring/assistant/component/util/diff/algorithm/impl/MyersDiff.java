@@ -23,9 +23,7 @@ import org.springframework.util.CollectionUtils;
  *
  * <p>核心思想:编辑边的长度为D,寻找最小的D,使时间复杂度和空间复杂度都为O(ND).主要是在对角线上进行操作.
  *
- * <p>论文参见 <a href "https://neil.fraser.name/software/diff_match_patch/myers.pdf">
- *
- * <p>算法简要分析 <a href "http://gitlab.alipay-inc.com/app_release/arcore/issues/183">
+ * <p>论文参见 https://neil.fraser.name/software/diff_match_patch/myers.pdf
  *
  * <p>基本概念:
  *
@@ -43,7 +41,12 @@ import org.springframework.util.CollectionUtils;
  */
 public class MyersDiff implements DiffAlgorithm {
 
-    /** 比对结果转义 */
+    /**
+     * 比对结果转义
+     *
+     * @param path
+     * @return
+     */
     public static List<CompareResult> constructCompareResult(final Patch path) {
 
         List<CompareResult> compareResults = Lists.newArrayList();
@@ -68,7 +71,13 @@ public class MyersDiff implements DiffAlgorithm {
         return compareResults;
     }
 
-    /** 比较过程中有错误时,返回空的Patch */
+    /**
+     * 比较过程中有错误时,返回空的Patch
+     *
+     * @param original
+     * @param revised
+     * @return
+     */
     @Override
     public List<CompareResult> diff(final List<String> original, final List<String> revised) {
         if (original == null) {
@@ -89,6 +98,11 @@ public class MyersDiff implements DiffAlgorithm {
         return Lists.newArrayList();
     }
 
+    /**
+     * @param original
+     * @param revised
+     * @return
+     */
     @Override
     public List<CompareResult> diffUnsort(final List<String> original, final List<String> revised) {
         if (original == null) {
@@ -125,7 +139,14 @@ public class MyersDiff implements DiffAlgorithm {
         return false;
     }
 
-    /** 根据Gene Myers differencing algorithm,计算两个字符串序列中的最小差异路径 */
+    /**
+     * 根据Gene Myers differencing algorithm,计算两个字符串序列中的最小差异路径
+     *
+     * @param orig
+     * @param rev
+     * @return
+     * @throws DifferentiationFailedException
+     */
     public PathNode buildPath(final List<String> orig, final List<String> rev)
             throws DifferentiationFailedException {
         if (orig == null) throw new IllegalArgumentException("original sequence is null");
@@ -191,7 +212,14 @@ public class MyersDiff implements DiffAlgorithm {
         return orig.equals(rev);
     }
 
-    /** 构造差异信息 */
+    /**
+     * 构造差异信息
+     *
+     * @param path
+     * @param orig
+     * @param rev
+     * @return
+     */
     public List<CompareResult> buildRevision(PathNode path, List<String> orig, List<String> rev) {
         // 校验
         if (path == null) throw new IllegalArgumentException("path is null");
@@ -227,7 +255,14 @@ public class MyersDiff implements DiffAlgorithm {
         return constructCompareResult(patch);
     }
 
-    /** 从字符串序列中拷贝指定位置的子序列 */
+    /**
+     * 从字符串序列中拷贝指定位置的子序列
+     *
+     * @param original
+     * @param fromIndex
+     * @param to
+     * @return
+     */
     private List<String> copyOfRange(
             final List<String> original, final int fromIndex, final int to) {
         return new ArrayList<String>(original.subList(fromIndex, to));

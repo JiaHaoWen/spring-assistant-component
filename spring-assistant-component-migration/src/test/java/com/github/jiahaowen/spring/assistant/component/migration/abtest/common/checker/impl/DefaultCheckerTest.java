@@ -2,13 +2,10 @@ package com.github.jiahaowen.spring.assistant.component.migration.abtest.common.
 
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.MigrationTestBase;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.checker.impl.DefaultChecker;
-import com.github.jiahaowen.spring.assistant.component.migration.internal.SpringAssistantComponentServiceMigrationConfig;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-@ContextConfiguration(classes = {SpringAssistantComponentServiceMigrationConfig.class})
 public class DefaultCheckerTest extends MigrationTestBase {
 
     @Autowired private DefaultChecker defaultChecker;

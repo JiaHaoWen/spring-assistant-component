@@ -10,8 +10,5 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
  * @since 2017/11/20
  */
 @SpringBootTest(classes = TestApp.class)
-@ContextConfiguration(
-    classes = {SpringAssistantComponentServiceMigrationConfig.class},
-    locations = {"classpath*:/spring/*.xml"}
-)
+@ContextConfiguration(classes = {SpringAssistantComponentServiceMigrationConfig.class})
 public abstract class MigrationTestBase extends AbstractTestNGSpringContextTests {}

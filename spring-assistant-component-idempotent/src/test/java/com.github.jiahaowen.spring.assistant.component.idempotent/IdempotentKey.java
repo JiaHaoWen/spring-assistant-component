@@ -15,7 +15,6 @@ import org.springframework.core.annotation.Order;
 
 /**
  * @author jiahaowen
- * @date 2017/7/31 17:52
  */
 public class IdempotentKey {
     @Idempotent(

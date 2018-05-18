@@ -33,6 +33,12 @@ public class CustomerLineWriter implements CheckableLineWriter {
 
     private final PathInclusionChecker pathInclusionChecker;
 
+    /**
+     * @param lineWriter
+     * @param serializerFactory
+     * @param propertyInclusionChecker
+     * @param pathInclusionChecker
+     */
     public CustomerLineWriter(
             final LineWriter lineWriter,
             final SerializerFactory serializerFactory,
@@ -44,6 +50,10 @@ public class CustomerLineWriter implements CheckableLineWriter {
         this.pathInclusionChecker = pathInclusionChecker;
     }
 
+    /**
+     * @param object
+     * @return
+     */
     @Override
     public boolean applies(Object object) {
 

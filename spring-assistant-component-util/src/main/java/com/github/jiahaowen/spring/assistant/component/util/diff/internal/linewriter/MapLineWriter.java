@@ -30,11 +30,21 @@ public class MapLineWriter extends TypeSafeCheckableLineWriter<Map<Object, Objec
         this.serializerFactory = serializerFactory;
     }
 
+    /**
+     * @param value
+     * @return
+     */
     @Override
     public boolean applies(final Object value) {
         return value instanceof Map;
     }
 
+    /**
+     * @param path 路径描述了给定的对象在对象图中的位置.
+     * @param map
+     * @return
+     * @throws DiffException
+     */
     @Override
     public List<String> typeSafeWrite(final String path, final Map<Object, Object> map)
             throws DiffException {
@@ -58,6 +68,7 @@ public class MapLineWriter extends TypeSafeCheckableLineWriter<Map<Object, Objec
      *
      * @param path 路径描述了给定的对象在对象图中的位置.
      * @param key 待寻找序列化策略的key
+     * @return
      */
     private Serializer<Object> findMapKeySerializerOrThrowException(
             final String path, final Object key) {

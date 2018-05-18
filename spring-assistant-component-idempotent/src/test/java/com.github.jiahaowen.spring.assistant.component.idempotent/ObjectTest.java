@@ -2,7 +2,6 @@ package com.github.jiahaowen.spring.assistant.component.idempotent;
 
 /**
  * @author jiahaowen
- * @date 2017/8/1 16:41
  */
 public class ObjectTest {
     private TestA testA;

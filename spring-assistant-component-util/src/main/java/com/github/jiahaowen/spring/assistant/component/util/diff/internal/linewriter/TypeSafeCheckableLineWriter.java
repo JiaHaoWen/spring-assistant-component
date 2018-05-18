@@ -15,16 +15,38 @@ public abstract class TypeSafeCheckableLineWriter<T> implements CheckableLineWri
     /**
      * @param path 路径描述了给定的对象在对象图中的位置.
      * @param value 待序列化的对象
+     * @return
+     * @throws DiffException
      */
     abstract List<String> typeSafeWrite(String path, T value) throws DiffException;
 
+    /**
+     * @param path
+     * @param base
+     * @param working
+     * @return
+     * @throws DiffException
+     */
     abstract List<CompareResult> typeSafeWrite(String path, T base, T working) throws DiffException;
 
+    /**
+     * @param path 路径描述了给定的对象在对象图中的位置.
+     * @param value 待序列化的对象
+     * @return
+     * @throws DiffException
+     */
     @Override
     public List<String> write(final String path, final Object value) throws DiffException {
         return typeSafeWrite(path, (T) value);
     }
 
+    /**
+     * @param path
+     * @param base
+     * @param working
+     * @return
+     * @throws DiffException
+     */
     @Override
     public List<CompareResult> write(final String path, final Object base, final Object working)
             throws DiffException {

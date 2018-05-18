@@ -2,7 +2,6 @@ package com.github.jiahaowen.spring.assistant.component.idempotent.data;
 
 /**
  * @author jiahaowen
- * @date 2017/9/13 14:03
  */
 public class IdempotentOperateUtil {
     private static final IdempotentOperate operate = new DefaultIdempotentOperate();

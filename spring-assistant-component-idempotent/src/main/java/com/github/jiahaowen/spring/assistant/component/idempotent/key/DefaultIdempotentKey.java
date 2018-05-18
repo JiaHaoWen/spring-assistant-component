@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author jiahaowen
- * @date 2017/8/1 14:54
  */
 @Component
 public class DefaultIdempotentKey implements IdempotentKeyStrategy {

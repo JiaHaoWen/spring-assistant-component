@@ -26,6 +26,12 @@ public class IterableLineWriter extends TypeSafeCheckableLineWriter<Iterable<Obj
         this.lineWriter = lineWriter;
     }
 
+    /**
+     * @param path 路径描述了给定的对象在对象图中的位置.
+     * @param iterable
+     * @return
+     * @throws DiffException
+     */
     @Override
     public List<String> typeSafeWrite(final String path, final Iterable<Object> iterable)
             throws DiffException {
@@ -39,11 +45,22 @@ public class IterableLineWriter extends TypeSafeCheckableLineWriter<Iterable<Obj
         return lines;
     }
 
+    /**
+     * @param value
+     * @return
+     */
     @Override
     public boolean applies(final Object value) {
         return value instanceof Iterable;
     }
 
+    /**
+     * @param path
+     * @param base
+     * @param working
+     * @return
+     * @throws DiffException
+     */
     @Override
     public List<CompareResult> typeSafeWrite(
             final String path, final Iterable<Object> base, final Iterable<Object> working)

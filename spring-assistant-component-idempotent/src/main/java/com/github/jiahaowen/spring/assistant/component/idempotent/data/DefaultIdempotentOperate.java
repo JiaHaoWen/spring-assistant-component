@@ -11,7 +11,6 @@ import redis.clients.jedis.Jedis;
 
 /**
  * @author jiahaowen
- * @date 2017/9/13 13:54
  */
 public class DefaultIdempotentOperate implements IdempotentOperate, InitializingBean {
     private final Logger log = LoggerFactory.getLogger(getClass());

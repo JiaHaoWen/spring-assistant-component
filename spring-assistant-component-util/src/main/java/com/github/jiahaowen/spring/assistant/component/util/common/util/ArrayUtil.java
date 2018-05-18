@@ -4855,7 +4855,7 @@ public class ArrayUtil {
      *                       null,       // 嵌套null
      *                       {},         // 嵌套空数组
      *                       {2, 3, 4}   // 嵌套数组
-     *                    })                                 = "[[1, 2, 3], hello, <null>, [], [2, 3, 4]]"
+     *                    })                                 = "[[1, 2, 3], hello, null, [], [2, 3, 4]]"
      * </pre>
      *
      * @param array 要转换的数组
@@ -4881,7 +4881,7 @@ public class ArrayUtil {
      *                       null,       // 嵌套null
      *                       {},         // 嵌套空数组
      *                       {2, 3, 4}   // 嵌套数组
-     *                    }, "null")                                 = "[[1, 2, 3], hello, <null>, [], [2, 3, 4]]"
+     *                    }, "null")                                 = "[[1, 2, 3], hello, null, [], [2, 3, 4]]"
      * </pre>
      *
      * @param array 要转换的数组

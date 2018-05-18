@@ -10,12 +10,16 @@ import java.lang.annotation.Target;
 
 /**
  * example:
- * <pre>{@code
- * @link @Idempotent(previous = "uniqueKey", expiredTime = 20)
- * public void businessWithinIdempotent(@IdempotentParam String uniqueKey, @IdempotentParam(value="name") Order order) {
- * // business code within idempotent
- * }
- * }</pre>
+ *
+ * <p>@Idempotent(previous = "uniqueKey", expiredTime = 20)
+ *
+ * <p>public void businessWithinIdempotent(@IdempotentParam String
+ * uniqueKey, @IdempotentParam(value="name") Order order) {
+ *
+ * <p>business code within idempotent
+ *
+ * <p>}
+ *
  * @see IdempotentParam
  */
 @Retention(RetentionPolicy.RUNTIME)
@@ -27,10 +31,16 @@ public @interface Idempotent {
      * 定义幂等性key值的前缀值，用于区别不同的业务
      *
      * <p>更加细粒度的生成策略请参考： {@link DefaultIdempotentKey}
+     *
+     * @return
      */
     String previous() default "";
 
-    /** 过期时间，默认60秒 */
+    /**
+     * 过期时间，默认60秒
+     *
+     * @return
+     */
     int expiredTime() default 60;
 
     /**
@@ -41,6 +51,8 @@ public @interface Idempotent {
      * <p>如果是字符串类型：也可以当做基本基类处理
      *
      * <p>如果是自定义类型，那么需要提供一个无參的构造函数用于返回 默认不返回任何类型
+     *
+     * @return
      */
     Class<?> returnType() default Void.class;
 
@@ -48,6 +60,7 @@ public @interface Idempotent {
      * 基本类型的返回值 int : 1 or 2 等 boolean : true or false
      *
      * @see #returnType() 默认返回空字符串
+     * @return
      */
     String returnValue() default "";
 }

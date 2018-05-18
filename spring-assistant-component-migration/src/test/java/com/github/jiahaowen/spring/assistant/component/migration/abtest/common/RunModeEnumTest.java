@@ -1,11 +1,11 @@
 package com.github.jiahaowen.spring.assistant.component.migration.abtest.common;
 
-import com.github.jiahaowen.spring.assistant.component.migration.abtest.MigrationTestBase;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.common.enums.RunModeEnum;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
-public class RunModeEnumTest extends MigrationTestBase {
+
+public class RunModeEnumTest {
     @Test
     public void getMsg() throws Exception {
         Assert.assertEquals(RunModeEnum.OFF.getMsg(), "关闭");

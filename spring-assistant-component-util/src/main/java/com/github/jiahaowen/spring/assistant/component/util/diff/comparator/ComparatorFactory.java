@@ -105,15 +105,22 @@ public class ComparatorFactory {
         comparables.add(comparable);
     }
 
+    /** @param checkableComparators */
     public void addComparators(Set<CheckableComparator> checkableComparators) {
         checkableComparators.addAll(checkableComparators);
     }
 
+    /** @param comparables */
     public void addComparables(Set<Class<? extends Comparable<?>>> comparables) {
         comparables.addAll(comparables);
     }
 
-    /** 对指定的对象,找到合适的比较器. */
+    /**
+     * 对指定的对象,找到合适的比较器.
+     *
+     * @param object
+     * @return
+     */
     public Optional<Comparator<Object>> findFor(final Object object) {
 
         if (isComparable(object)) {
@@ -123,7 +130,12 @@ public class ComparatorFactory {
         return findComparatorFor(object);
     }
 
-    /** 对指定的对象,找到合适的比较器 */
+    /**
+     * 对指定的对象,找到合适的比较器
+     *
+     * @param object
+     * @return
+     */
     @SuppressWarnings("unchecked")
     private Optional<Comparator<Object>> findComparatorFor(final Object object) {
         for (final CheckableComparator<?> comparator : checkableComparators) {
@@ -134,7 +146,12 @@ public class ComparatorFactory {
         return Optional.absent();
     }
 
-    /** 判断给定的类型是否实现{@link Comparable}接口,若实现{@link Comparable},则采用默认的比较方法 */
+    /**
+     * 判断给定的类型是否实现{@link Comparable}接口,若实现{@link Comparable},则采用默认的比较方法
+     *
+     * @param object
+     * @return
+     */
     private boolean isComparable(final Object object) {
 
         if (comparables.contains(object.getClass())) {

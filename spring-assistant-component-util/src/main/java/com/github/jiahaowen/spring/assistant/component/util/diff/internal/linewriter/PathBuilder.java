@@ -17,7 +17,13 @@ public final class PathBuilder {
     // 迭代对象结束位置符
     private static final String INDEX_ENCLOSER_END = "]";
 
-    /** 对指定路径追加属性名称,得到完整的对象层级关系 */
+    /**
+     * 对指定路径追加属性名称,得到完整的对象层级关系
+     *
+     * @param path
+     * @param propertyName
+     * @return
+     */
     public static String extendPathWithProperty(final String path, final String propertyName) {
         return new StringBuilder()
                 .append(path)
@@ -26,7 +32,13 @@ public final class PathBuilder {
                 .toString();
     }
 
-    /** 对指定路径追加索引序号,得到完整的iterable路径 */
+    /**
+     * 对指定路径追加索引序号,得到完整的iterable路径
+     *
+     * @param path
+     * @param index
+     * @return
+     */
     public static String extendPathWithIterableIndex(final String path, final int index) {
         return new StringBuilder()
                 .append(path)
@@ -36,7 +48,13 @@ public final class PathBuilder {
                 .toString();
     }
 
-    /** 对指定的路径追加对象索引,得到map路径 */
+    /**
+     * 对指定的路径追加对象索引,得到map路径
+     *
+     * @param path
+     * @param key
+     * @return
+     */
     public static String extendPathWithMapIndex(final String path, final Object key) {
         return new StringBuilder()
                 .append(path)
@@ -46,7 +64,13 @@ public final class PathBuilder {
                 .toString();
     }
 
-    /** 对指定的路径追加对象值索引,得到完整的key/value路径 */
+    /**
+     * 对指定的路径追加对象值索引,得到完整的key/value路径
+     *
+     * @param path
+     * @param value
+     * @return
+     */
     public static String extendPathWithValue(final String path, final Object value) {
         return new StringBuilder()
                 .append(path)

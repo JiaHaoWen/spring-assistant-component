@@ -8,6 +8,11 @@ package com.github.jiahaowen.spring.assistant.component.util.diff.internal.seria
  */
 public interface Serializer<T> {
 
-    /** 将给定的对象序列化为String */
+    /**
+     * 将给定的对象序列化为String
+     *
+     * @param object
+     * @return
+     */
     String serialize(T object);
 }

@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author jiahaowen
- * @date 2017/7/31 18:20
  */
 @Component
 public class IdempotentInterceptor implements MethodInterceptor {

@@ -25,6 +25,10 @@ public class PathInclusionChecker {
         this.excludedPaths = excludedPaths;
     }
 
+    /**
+     * @param path
+     * @return
+     */
     public boolean apply(@Nullable String path) {
 
         if (StringUtil.isEmpty(path)) {

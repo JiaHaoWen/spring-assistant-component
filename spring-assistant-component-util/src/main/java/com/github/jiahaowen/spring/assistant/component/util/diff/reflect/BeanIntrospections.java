@@ -24,7 +24,12 @@ public final class BeanIntrospections {
 
     private static final String TYPE_MUST_NOT_BE_NULL = "类型不能为空.";
 
-    /** 判断给定的类型是否存在构造函数 */
+    /**
+     * 判断给定的类型是否存在构造函数
+     *
+     * @param type
+     * @return
+     */
     public static boolean hasDefaultConstructor(final Class<?> type) {
 
         checkNotNull(type, TYPE_MUST_NOT_BE_NULL);
@@ -40,25 +45,46 @@ public final class BeanIntrospections {
         return false;
     }
 
-    /** 对指定的类型,遍历得到所有的set属性集合 */
+    /**
+     * 对指定的类型,遍历得到所有的set属性集合
+     *
+     * @param type
+     * @return
+     */
     public static Set<PropertyDescriptor> getWriteableProperties(final Class<?> type) {
         checkNotNull(type, TYPE_MUST_NOT_BE_NULL);
         return getProperties(type, HasWriteMethod.INSTANCE);
     }
 
-    /** 对指定的类型,遍历得到所有的get属性集合 */
+    /**
+     * 对指定的类型,遍历得到所有的get属性集合
+     *
+     * @param type
+     * @return
+     */
     public static Set<PropertyDescriptor> getReadableProperties(final Class<?> type) {
         checkNotNull(type, TYPE_MUST_NOT_BE_NULL);
         return getProperties(type, HasReadMethod.INSTANCE);
     }
 
-    /** 对指定的类型,遍历得到所有的set/get属性集合 */
+    /**
+     * 对指定的类型,遍历得到所有的set/get属性集合
+     *
+     * @param type
+     * @return
+     */
     public static Set<PropertyDescriptor> getWriteableAndReadableProperties(final Class<?> type) {
         checkNotNull(type, TYPE_MUST_NOT_BE_NULL);
         return getProperties(type, Predicates.and(HasReadMethod.INSTANCE, HasWriteMethod.INSTANCE));
     }
 
-    /** 对指定的类型及过滤器,遍历得到所有的符合条件的属性集合 */
+    /**
+     * 对指定的类型及过滤器,遍历得到所有的符合条件的属性集合
+     *
+     * @param type
+     * @param predicate
+     * @return
+     */
     private static Set<PropertyDescriptor> getProperties(
             final Class<?> type, final Predicate<? super PropertyDescriptor> predicate) {
 

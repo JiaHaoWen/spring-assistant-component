@@ -18,10 +18,15 @@ public class ArrayLineWriter implements CheckableLineWriter {
     /** 内部序列化类 */
     private final LineWriter lineWriter;
 
+    /** @param lineWriter */
     public ArrayLineWriter(final LineWriter lineWriter) {
         this.lineWriter = lineWriter;
     }
 
+    /**
+     * @param value
+     * @return
+     */
     @Override
     public boolean applies(final Object value) {
 
@@ -31,6 +36,12 @@ public class ArrayLineWriter implements CheckableLineWriter {
         return false;
     }
 
+    /**
+     * @param path 路径描述了给定的对象在对象图中的位置.
+     * @param value 待序列化的对象
+     * @return
+     * @throws DiffException
+     */
     @Override
     public List<String> write(String path, Object value) throws DiffException {
 

@@ -4,16 +4,10 @@ import com.github.jiahaowen.spring.assistant.component.migration.abtest.Migratio
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.core.client.Client;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.core.client.impl.ClientImpl;
 import com.github.jiahaowen.spring.assistant.component.migration.abtest.interceptor.config.ABTestConfig;
-import com.github.jiahaowen.spring.assistant.component.migration.internal.SpringAssistantComponentServiceMigrationConfig;
 import junit.framework.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
 import org.testng.annotations.Test;
 
-@ContextConfiguration(
-    classes = {SpringAssistantComponentServiceMigrationConfig.class},
-    locations = {"classpath*:/spring/*.xml"}
-)
 public class InterceptServiceTest extends MigrationTestBase {
 
     @Autowired private Client client;
