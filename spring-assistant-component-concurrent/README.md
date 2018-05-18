@@ -11,11 +11,9 @@
      
      <dependency>
          <groupId>com.github.jiahaowen</groupId>
-         <artifactId>spring-assistant-component-cache-spring</artifactId>
+         <artifactId>spring-assistant-component-concurrent</artifactId>
      </dependency>
  
    ```
 
-### 2. 配置请参考 AutoloadCacheProperties.java
-
-### 3. 依赖注入请参考 AutoloadCacheManageConfiguration.java 
+### 2. 入口请参考 ConcurrentComponent.java

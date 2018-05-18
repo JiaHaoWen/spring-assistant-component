@@ -24,11 +24,17 @@
 
 ### spring工程接入参考
 
-```
+  ```
+    <parent>
+        <groupId>com.github.jiahaowen</groupId>
+        <artifactId>spring-assistant-component</artifactId>
+        <version>1.0</version>
+    </parent>
+    
+    
     <dependency>
-      <groupId>com.github.jiahaowen</groupId>
-      <artifactId>spring-assistant-component-cache</artifactId>
-      <version>1.0-SNAPSHOT</version>
+        <groupId>com.github.jiahaowen</groupId>
+        <artifactId>spring-assistant-component-cache</artifactId>
     </dependency>
 
-```
+  ```

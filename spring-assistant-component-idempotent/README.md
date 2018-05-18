@@ -69,4 +69,21 @@
 ### 六：引用：
    + [设计强大且可预测的幂等性API](https://stripe.com/blog/idempotency)
    + [安全的实现幂等性操作](https://developer.salesforce.com/blogs/engineering/2013/01/implementing-idempotent-operations-with-salesforce.html)
-   + [分布式系统互斥性与幂等性问题的分析与解决](https://tech.meituan.com/distributed-system-mutually-exclusive-idempotence-cerberus-gtis.html)       
+   + [分布式系统互斥性与幂等性问题的分析与解决](https://tech.meituan.com/distributed-system-mutually-exclusive-idempotence-cerberus-gtis.html)
+
+### 七：maven依赖
+
+  ```
+    <parent>
+        <groupId>com.github.jiahaowen</groupId>
+        <artifactId>spring-assistant-component</artifactId>
+        <version>1.0</version>
+    </parent>
+    
+    
+    <dependency>
+        <groupId>com.github.jiahaowen</groupId>
+        <artifactId>spring-assistant-component-idempotent</artifactId>
+    </dependency>
+    
+ ```          

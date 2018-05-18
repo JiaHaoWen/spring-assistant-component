@@ -27,6 +27,12 @@
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+    </dependency>
+
   </dependencies>
 
   <build>
