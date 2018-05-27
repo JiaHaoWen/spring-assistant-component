@@ -1,6 +1,7 @@
 # spring-assistant-component
 
 * Technical components accumulated in daily work.
+
 * 日常工作中沉淀的一些技术组件，可作为辅助功能快速应用，包含下面内容:
    * 缓存
    * 并发
@@ -8,6 +9,10 @@
    * 服务迁移
    * 通用工具
    * 对象比对&&数据校验
+   * 规则引擎
+   * ...
+
+* 每种组件的介绍、使用方法等，请参考组件所在目录的README.md文件
 
 * 接入maven依赖
 
@@ -43,7 +48,11 @@
         <dependency>
           <groupId>com.github.jiahaowen</groupId>
           <artifactId>spring-assistant-component-util</artifactId>
-        </dependency>        
+        </dependency>
+        <dependency>
+          <groupId>com.github.jiahaowen</groupId>
+          <artifactId>spring-assistant-component-rule</artifactId>
+        </dependency>            
       </dependencies>
     <dependencyManagement>
   ```
